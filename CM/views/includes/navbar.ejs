@@ -1,0 +1,41 @@
+<nav
+  class="navbar navbar-expand-md navbar-dark bg-primary border-bottom sticky-top"
+>
+  <div class="container">
+    <a class="navbar-brand" href="/" class="mt-3">
+      <i class="fa-solid fa-house-laptop" style="color: #ffffff"></i>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/myCommunity">My Community</a>
+        <a class="nav-item nav-link" href="/addCommunity">Add Community</a>
+        <a class="nav-item nav-link" href="/community">Join Community</a>
+      </div>
+
+      <div class="navbar-nav ms-auto px-8">
+        <% if(!currUser) { %>
+        <a class="nav-item nav-link" href="/signup">Sign Up</a>
+        <a class="nav-item nav-link" href="/login">Login</a>
+        <% } %> <% if(currUser) { %>
+        <a href="/user" class="mt-2"
+          ><i class="fa-solid fa-user" style="color: #ffffff"></i
+        ></a>
+        <a class="nav-item nav-link" href="/logout">Log out</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
